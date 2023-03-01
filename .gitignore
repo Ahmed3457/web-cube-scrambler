@@ -150,3 +150,33 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+main.build/.sconsign-38.dblite
+main.build/@link_input.txt
+main.build/__bytecode.const
+main.build/__constants.bin
+main.build/__constants.c
+main.build/__constants.const
+main.build/__constants.h
+main.build/__constants.o
+main.build/__helpers.c
+main.build/__helpers.h
+main.build/__helpers.o
+main.build/__loader.c
+main.build/__loader.o
+main.build/build_definitions.h
+main.build/module.__main__.c
+main.build/module.__main__.const
+main.build/module.__main__.o
+main.build/scons-report.txt
+main.build/static_src/CompiledCellType.c
+main.build/static_src/CompiledCellType.o
+main.build/static_src/CompiledFunctionType.c
+main.build/static_src/CompiledFunctionType.o
+main.build/static_src/CompiledGeneratorType.c
+main.build/static_src/CompiledGeneratorType.o
+main.build/static_src/InspectPatcher.c
+main.build/static_src/InspectPatcher.o
+main.build/static_src/MainProgram.c
+main.build/static_src/MainProgram.o
+main.cmd
+main.exe
