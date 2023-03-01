@@ -180,3 +180,4 @@ main.build/static_src/MainProgram.c
 main.build/static_src/MainProgram.o
 main.cmd
 main.exe
+build/
