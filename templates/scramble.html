@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root{
+            --bg:#1a1a1a;
+            --font: #ffffff;
+        }
+        *{
+            background-color: var(--bg);
+            color: var(--font);
+            font-family: monospace;
+            font-size: x-large;
+            margin: auto;
+        }
+        .content{
+            margin-top: 50px;
+            font-size: 25px;
+            text-align: center;
+        }
+        h1.content{
+            font-size: 45px;   
+            text-align: center;
+        }
+    </style>
+    <title>Scrambler</title>
+</head>
+<body>
+    <h1 class="content">Here's your Scramble</h1>
+    <div class="content">{{scramble}}</div>
+    <p class="content"><a href="/">Back to the homepage</a></p>
+</body>
+</html>
