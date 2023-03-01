@@ -1,5 +1,9 @@
-from flask import Flask, render_template, redirect
-from pyTwistyScrambler import scrambler333
+from os import system
+try:
+    from flask import Flask, render_template, redirect
+    from pyTwistyScrambler import scrambler333
+except:
+    system("python -m pip3 install -r requirements.txt")
 app = Flask(__name__)
 
 @app.route("/")
