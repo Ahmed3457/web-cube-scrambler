@@ -8,6 +8,7 @@
         :root{
             --bg:#1a1a1a;
             --font: #ffffff;
+            --ligt-bg: #2b2a2a;
         }
         *{
             background-color: var(--bg);
@@ -25,6 +26,12 @@
             font-size: 45px;   
             text-align: center;
         }
+        div.content{
+            background-color: var(--ligt-bg);
+            border-radius: 10px;
+            width: 1000px;
+            padding: 10px;
+        }
         a:link{
             text-decoration: none;
             font-size: xx-large;
@@ -34,12 +41,22 @@
             text-decoration: none;
             color: var(--font);
         }
+        p.content{
+            margin-top: 80px;
+        }
+        scramble-display{
+            margin-top: 80px;
+            background-color: var(--ligt-bg);
+            border-radius: 10px;
+        }
     </style>
+    <script src="https://cdn.cubing.net/js/scramble-display" type="module"></script>
     <title>Scrambler</title>
 </head>
 <body>
     <h1 class="content">Here's your Scramble</h1>
     <div class="content">{{scramble}}</div>
+    <scramble-display class="scramble-display" scramble="{{scramble}}"></scramble-display>
     <p class="content"><a href="/">Back to the homepage</a></p>
 </body>
 </html>
