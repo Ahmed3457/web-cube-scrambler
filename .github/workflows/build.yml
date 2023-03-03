@@ -7,9 +7,16 @@ jobs:
         os: [ubuntu-latest, windows-latest, macos-latest]
     runs-on: ${{ matrix.os }}
     steps:
-    - uses: actions/checkout@v2
-    - name: Build python script into a stand-alone executable
-      uses: Nuitka/Nuitka-Action@v0.4
-      with:
-        script-name: main.py
-        standalone-mode: true
+      - uses: actions/checkout@v2
+      - name: Install orderedset package
+        run: pip install orderedset
+      - name: Build python script into a stand-alone executable
+        uses: Nuitka/Nuitka-Action@v0.4
+        with:
+          script-name: main.py
+          standalone-mode: true
+      - name: Upload executable as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: main-${{ matrix.os }}
+          path: main.exe
