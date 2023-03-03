@@ -1,4 +1,8 @@
 from os import system
+from webbrowser import open
+
+page = "http://localhost:5000"
+
 try:
     from flask import Flask, render_template, redirect
     from pyTwistyScrambler import scrambler333
@@ -24,4 +28,7 @@ def scramble_f2l():
 def scramble_ll():
     scramble = scrambler333.get_LL_scramble()
     return render_template("scramble.html", scramble=scramble)
+
+open(page)
+
 app.run(port=5000, debug=True)
