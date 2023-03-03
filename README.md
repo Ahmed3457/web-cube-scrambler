@@ -25,5 +25,12 @@ python main.py
 ```
 if you encounter any Errors please open an **Issue**
 
+# To-Do
+TO-DO
+- [ ] Improve the GUI 
+- [ ] Add a timer 
+- [ ] Add 2 Look OLL scrambles
+- [ ] Add 2 Look PLL scrambles
+
 # License
 To ensure This project is **Free for everyone** this project is published under the **GNU GPL-3.0** License or later
