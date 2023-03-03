@@ -1,0 +1,15 @@
+name: Build with Nuitka
+on: [push]
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build python script into a stand-alone executable
+      uses: Nuitka/Nuitka-Action@v0.4
+      with:
+        script-name: main.py
+        standalone-mode: true
