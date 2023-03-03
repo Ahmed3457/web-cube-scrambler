@@ -14,7 +14,7 @@ jobs:
         uses: Nuitka/Nuitka-Action@v0.4
         with:
           script-name: main.py
-          standalone-mode: true
+          standalone: true # changed this line from standalone-mode to standalone
       - name: Upload executable as artifact
         uses: actions/upload-artifact@v2
         with:
