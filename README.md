@@ -28,6 +28,10 @@ You also can run it on any **port** your not just limited to 5000
 #The following command starts the scrambler at the port 8080
 python main.py 8080
 ```
+If you are using the Windows binary you **SHOULD** specifiy the port 
+```
+main.exe 5050
+```
 
 if you encounter any Errors please open an **Issue**
 
