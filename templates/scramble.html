@@ -42,12 +42,26 @@
             color: var(--font);
         }
         p.content{
-            margin-top: 80px;
+            position: absolute;
+            bottom: 20px;
+            left: 550px;
+            text-align: center;
         }
         scramble-display{
-            margin-top: 80px;
+            bottom: 10px;
+            left: 10px ;
             background-color: var(--ligt-bg);
             border-radius: 10px;
+            position: absolute;
+        }
+        #timer{
+            text-align: center;
+            font-size: 75px;
+            background-color: var(--ligt-bg);
+            padding: 5px;
+            width: 400px;
+            border-radius: 10px;
+            margin-top: 15px;
         }
     </style>
     <script src="https://cdn.cubing.net/js/scramble-display" type="module"></script>
@@ -56,7 +70,42 @@
 <body>
     <h1 class="content">Here's your Scramble</h1>
     <div class="content">{{scramble}}</div>
+    <p id="timer">00:00.00</p>
     <scramble-display class="scramble-display" scramble="{{scramble}}"></scramble-display>
     <p class="content"><a href="/">Back to the homepage</a></p>
+    <script>
+        let startTime, timerInterval;
+
+        function startTimer() {
+        let currentTime = Date.now();
+        startTime = currentTime;
+
+        timerInterval = setInterval(updateTimer, 10);
+        }
+
+        function stopTimer() {
+        clearInterval(timerInterval);
+        }
+
+        function updateTimer() {
+        let currentTime = Date.now();
+        let elapsedTime = currentTime - startTime;
+
+        let minutes = Math.floor(elapsedTime / 60000);
+        let seconds = ((elapsedTime % 60000) / 1000).toFixed(2);
+
+        document.getElementById("timer").innerHTML = minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+        }
+
+        document.addEventListener("keydown", function (event) {
+        if (event.code === "Space") {
+            if (timerInterval) {
+            stopTimer();
+            } else {
+            startTimer();
+            }
+        }
+        });
+    </script>
 </body>
 </html>
