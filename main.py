@@ -1,6 +1,6 @@
 from os import system
 from webbrowser import open
-from sys import argv
+from sys import argv, exit
 
 if len(argv) < 1:
     port = 5000
@@ -10,7 +10,7 @@ else:
         port = int(input_port)
     except:
         print("Invalid input port, please input a valid port, the port have to be a number")
-        quit()
+        exit(1)
 page = f"http://localhost:{port}"
 
 try:
@@ -52,4 +52,4 @@ def scramble_ll():
 
 open(page)
 
-app.run(port=port, debug=True)
+app.run(port=port)
