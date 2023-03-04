@@ -23,6 +23,12 @@ the **Third step** is just to run the file
 ```bash
 python main.py
 ```
+You also can run it on any **port** your not just limited to 5000
+```bash
+#The following command starts the scrambler at the port 8080
+python main.py 8080
+```
+
 if you encounter any Errors please open an **Issue**
 
 # To-Do
