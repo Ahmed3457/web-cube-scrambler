@@ -2,7 +2,7 @@ from os import system
 from webbrowser import open
 from sys import argv, exit
 
-if len(argv) < 1:
+if len(argv) < 2:
     port = 5000
 else:
     try:
