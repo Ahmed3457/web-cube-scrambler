@@ -1,7 +1,17 @@
 from os import system
 from webbrowser import open
+from sys import argv
 
-page = "http://localhost:5000"
+if len(argv) < 1:
+    port = 5000
+else:
+    try:
+        input_port = argv[1]
+        port = int(input_port)
+    except:
+        print("Invalid input port, please input a valid port, the port have to be a number")
+        quit()
+page = f"http://localhost:{port}"
 
 try:
     from flask import Flask, render_template, redirect
@@ -42,4 +52,4 @@ def scramble_ll():
 
 open(page)
 
-app.run(port=5000, debug=True)
+app.run(port=port, debug=True)
