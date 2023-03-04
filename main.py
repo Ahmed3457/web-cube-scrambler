@@ -7,7 +7,9 @@ try:
     from flask import Flask, render_template, redirect
     from pyTwistyScrambler import scrambler333
 except:
-    system("python -m pip3 install -r requirements.txt")
+    system("python -m pip install -r requirements.txt")
+    from flask import Flask, render_template, redirect
+    from pyTwistyScrambler import scrambler333
 app = Flask(__name__)
 
 @app.route("/")
