@@ -13,7 +13,7 @@ you need the following:
 
 2. Pip 3
 
-3. --NodeJS (Required for the scrambling library)-- **Just skip this, i added the nodejs-bin pypi package it fixes it**
+3. ~~NodeJS (Required for the scrambling library)~~ **Just skip this, i added the nodejs-bin pypi package it fixes it**
 
 4. Git (optional)
 
