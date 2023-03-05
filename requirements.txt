@@ -1,2 +1,3 @@
 flask
 pyTwistyScrambler
+nodejs-bin
