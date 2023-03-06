@@ -40,7 +40,7 @@ def scramble_f2l():
         scramble = scrambler333.get_F2L_scramble()
     except:
         scramble = "The reason you are seeing this message is that you don't have node js Installed, <a href='https://nodejs.org'>Click here</a>"
-    return render_template("scramble/scramble.html", scramble=scramble)
+    return render_template("scramble.html", scramble=scramble)
 
 @app.route("/ll")
 def scramble_ll():
@@ -48,7 +48,7 @@ def scramble_ll():
         scramble = scrambler333.get_LL_scramble()
     except:
         scramble = "The reason you are seeing this message is that you don't have node js Installed, <a href='https://nodejs.org'>Click here</a>"
-    return render_template("scramble/scramble.html", scramble=scramble)
+    return render_template("scramble.html", scramble=scramble)
 
 open(page)
 
