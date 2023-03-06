@@ -24,7 +24,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def mainpage():
-    return render_template("index/index.html")
+    return render_template("index.html")
     
 @app.route("/full")
 def scramble():
@@ -32,7 +32,7 @@ def scramble():
         scramble = scrambler333.get_WCA_scramble()
     except:
         scramble = "The reason you are seeing this message is that you don't have node js Installed, <a href='https://nodejs.org'>Click here</a>"
-    return render_template("scramble/scramble.html", scramble=scramble)
+    return render_template("scramble.html", scramble=scramble)
 
 @app.route("/f2l")
 def scramble_f2l():
@@ -52,4 +52,4 @@ def scramble_ll():
 
 open(page)
 
-app.run(port=port)
+app.run(port=port, debug=True)
