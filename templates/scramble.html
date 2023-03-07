@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block title %}Scrambler{% endblock %}
+{% block content %}
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.cubing.net/js/scramble-display" type="module"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/scramble.css') }}">
-    <title>Scrambler</title>
 </head>
 <body>
     <h1 class="content">Here's your Scramble</h1>
@@ -16,4 +16,4 @@
     <p class="content"><a href="/">Back to the homepage</a></p>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
-</html>
+{% endblock %}
