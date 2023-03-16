@@ -52,4 +52,4 @@ def scramble_ll():
 
 open(page)
 
-app.run(port=port, debug=True)
+app.run(port=port)
